@@ -27,12 +27,12 @@ app.get('/', (req, res) =>
 app.post(
     '/api/users',
     [
-        check('Name', 'Please enter your name')
+        check('name', 'Please enter your name')
             .not()
             .isEmpty(),
-        check('Email', 'Please enter a valid email').isEmail(),
+        check('email', 'Please enter a valid email').isEmail(),
         check(
-            'Password',
+            'password',
             'Please enter a password with 6 or more characters'
         ).isLength({ min: 6 })
     ],
