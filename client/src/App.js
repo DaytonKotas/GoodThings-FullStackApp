@@ -1,9 +1,8 @@
 import React from 'react';
 import './App.css';
 import axios from "axios";
-import { response } from 'express';
 
-class App extends React.Component{
+class App extends React.Component {
   state = {
     data: null
   }
@@ -17,7 +16,7 @@ class App extends React.Component{
     })
     .catch((error) => {
       // eslint-disable-next-line no-template-curly-in-string
-      console.error("Error fetching data: ${error}");
+      console.error('Error fetching data: ${error}');
     })
   }
   
@@ -27,6 +26,7 @@ class App extends React.Component{
       <header className="App-header">
       GoodThings
       </header>
+      {this.state.data}
       </div>
     );
   }
