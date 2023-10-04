@@ -1,3 +1,4 @@
+/* eslint-disable no-template-curly-in-string */
 import logo from './logo.svg';
 import './App.css';
 import axios from 'axios';
