@@ -78,13 +78,14 @@ class App extends React.Component {
   };
 
   render() {
-  let { user, data } = this.state;
-  const authProps = {
-    authenticateUser: this.authenticateUser
+    let { user, data } = this.state;
+    const authProps = {
+      authenticateUser: this.authenticateUser
+    }
   }
-}
+};
 
-<header className="App-header">
+<><header className="App-header">
   <h1>GoodThings</h1>
   <ul>
     <li>
@@ -96,32 +97,28 @@ class App extends React.Component {
     <li>
       {user ?
         <Link to="" onClick={this.logout}>Log out</Link> :
-        <Link to="/login">Log in</Link>
-      }
+        <Link to="/login">Log in</Link>}
     </li>
   </ul>
-</header>
-
-<main>
-  <Route exact path="/">
-    {user ?
-      <React.Fragment>
-        <div>Hello {user}!</div>
-        <div>{data}</div>
-      </React.Fragment> :
-      <React.Fragment>
-        Please Register or Login
-      </React.Fragment>
-    }
-  </Route>
-  <Switch>
-    <Route
-      exact path="/register"
-      render={() => <Register {...authProps} />} />
-    <Route
-      exact path="/login"
-      render={() => <Login {...authProps} />} />
-  </Switch>
-</main>
+</header><main>
+    <Route exact path="/">
+      {user ?
+        <React.Fragment>
+          <div>Hello {user}!</div>
+          <div>{data}</div>
+        </React.Fragment> :
+        <React.Fragment>
+          Please Register or Login
+        </React.Fragment>}
+    </Route>
+    <Switch>
+      <Route
+        exact path="/register"
+        render={() => <Register {...authProps} />} />
+      <Route
+        exact path="/login"
+        render={() => <Login {...authProps} />} />
+    </Switch>
+  </main></>
 
 export default App;
