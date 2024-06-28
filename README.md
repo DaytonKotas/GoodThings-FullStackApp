@@ -1,3 +1,3 @@
-# Dayton-Kotas
+# GoodThings 
 
-ITDEV161-800
+Full-stack application that includes both frontend and backend components.
